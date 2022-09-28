@@ -1,0 +1,50 @@
+D:\>Xray-windows-arm32-v7a_pre-release\xray.exe -v
+fatal error: fault
+                  [signal 0xc000001d code=0x0 addr=0x0 pc=0xa94fcd]
+
+                                                                   goroutine 1 [running, locked to thread]:
+                                                                                                           runtime.throw({0x15243af, 0x5})
+     	runtime/panic.go:992 +0x5c fp=0x12851654 sp=0x12851640 pc=0xa0d8dc
+                                                                          runtime.sigpanic()
+                                                                                            	runtime/signal_windows.go:273 +0x1bc fp=0x12851678 sp=0x12851654 pc=0xa25024
+                                       syscall.DeleteFile(0x0)
+                                                              	syscall/zsyscall_windows.go:569 +0x111 fp=0x128516a8 sp=0x1285167c pc=0xa94fcd
+         runtime: unexpected return pc for runtime.doInit called from 0x0
+                                                                         stack: frame={sp:0x128516a8, fp:0x128517cc} stack=[0x12850000,0x12852000)
+             0x12851628:  0x00a0d8dc <runtime.throw+0x0000005c>  0x12851630  0x00a0db00 <runtime.fatalthrow.func1+0x00000000>  0x1282e0f0 
+     0x12851638:  0x00a0d8dc <runtime.throw+0x0000005c>  0x12851640  0x00a25024 <runtime.sigpanic+0x000001bc>  0x12851648 
+                                                                                                                          0x12851648:  0x00a0d8f4 <runtime.throw.func1+0x00000000>  0x015243af  0x00000005  0x00a94fcd <syscall.DeleteFile+0x00000111> 
+                                                                                                                  0x12851658:  0x015243af  0x00000005  0x00000000  0x00000000 
+                                         0x12851668:  0x1282e0f0  0x00a94fcd <syscall.DeleteFile+0x00000111>  0x000b980d  0x00000000 
+                                                                                                                                    0x12851678:  0x00a9cf2c <syscall.init+0x00003244>  0x00a1f178 <runtime.doInit+0x00000110>  0xfffffff6  0x12898888 
+                                                                                                                 0x12851688:  0x01529d80  0x0000000a  0x1289a04d  0x12898060 
+                                        0x12851698:  0x00000000  0x00000000  0x00a1f0bc <runtime.doInit+0x00000054>  0x00000000 
+                                                                                                                                0x128516a8: <0x00000000  0x00000000  0x00000000  0x00000000 
+                                                       0x128516b8:  0x00000000  0x00000000  0x00000000  0x00000000 
+                                                                                                                   0x128516c8:  0x009dd370 <runtime.mallocgc+0x0000076c>  0x00000000  0x009dd370 <runtime.mallocgc+0x0000076c>  0x00000000 
+                                                                                                      0x128516d8:  0x00000000  0x00000000  0x00000000  0x00000000 
+                             0x128516e8:  0x00000000  0x00000000  0x00000000  0x00000000 
+                                                                                         0x128516f8:  0x00000000  0x00000000  0x128860bf  0x00000008 
+                0x12851708:  0x00000000  0x0000004a  0x00000000  0x00000000 
+                                                                            0x12851718:  0x00000000  0x00000000  0x00000000  0x00000000 
+   0x12851728:  0x00000000  0x0000001c  0x0000004a  0x0000004a 
+                                                               0x12851738:  0x00000000  0x00000000  0x0169d09f  0x00000000 
+                                                                                                                           0x12851748:  0x00000000  0x00000000  0x00000000  0x00000000 
+                                                  0x12851758:  0x009dd7d4 <runtime.newobject+0x0000002c>  0x128860a0  0x009dd7d4 <runtime.newobject+0x0000002c>  0x12884080 
+                                       0x12851768:  0x00000008  0x00000008  0x0143fcf0  0x00000000 
+                                                                                                   0x12851778:  0x0002cb08  0x00000000  0x01f5cb58  0x00000004 
+                          0x12851788:  0x01f502d8  0x00000008  0x01ccfdc0  0x12884080 
+                                                                                      0x12851798:  0x00000000  0x0000001c  0x00a8ce44 <internal/oserror.init+0x0000015c>  0x00000008 
+                                                0x128517a8:  0x0143fcf0  0x12898060  0x12898060  0x12898060 
+                                                                                                            0x128517b8:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                   0x128517c8:  0x12898060 >0x12898060  0x12898060  0x12898060 
+                                                                                               0x128517d8:  0x12898060  0x12898060  0x12898060  0x12898060 
+                      0x128517e8:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                                                                  0x128517f8:  0x12898060  0x12898060  0x12898060  0x12898060 
+         0x12851808:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                                                     0x12851818:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                                                                                                                 0x12851828:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                                        0x12851838:  0x12898060  0x12898060  0x12898060  0x12898060 
+                                                                                                                    0x12851848:  0x12898060 
+       runtime.doInit(0x12898060)
+                                 	runtime/proc.go:6222 +0x110 fp=0x128517cc sp=0x128516a8 pc=0xa1f178
