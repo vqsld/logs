@@ -1,0 +1,46 @@
+E:\p1471\frida-ios-dump-master>python dump.py -H 192.168.2.9 -u root -P alpine -p 22 "Netac iDrive"
+Waiting for USB device...
+Start the target app Netac iDrive
+Dumping Netac iDrive to C:\Users\p1471\AppData\Local\Temp
+start dump /var/containers/Bundle/Application/CC66DE61-E9EF-4D78-B6FE-6C802FE3CE64/Netac iDisk.app/Netac iDisk
+Netac iDisk.fid:  98%|███████████████████████████████████████████████████████████ | 11.1M/11.3M [00:06<00:00, 2.22MB/s]Traceback (most recent call last):
+  File "C:\Users\p1471\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\frida\core.py", line 418, in _on_message
+    callback(message, data)
+  File "E:\p1471\frida-ios-dump-master\dump.py", line 125, in on_message
+    subprocess.check_call(chmod_args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1024, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1493, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+Netac iDisk.fid: 100%|████████████████████████████████████████████████████████████| 11.3M/11.3M [00:06<00:00, 1.88MB/s]
+AppIcon60x60@2x.png: 18.0MB [00:12, 1.56MB/s]Traceback (most recent call last):
+  File "C:\Users\p1471\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\frida\core.py", line 418, in _on_message
+    callback(message, data)
+  File "E:\p1471\frida-ios-dump-master\dump.py", line 143, in on_message
+    subprocess.check_call(chmod_args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1024, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.496.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 1493, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+IJKMoviePlayerViewController.nib: 18.0MB [00:12, 1.56MB/s]
+0.00B [00:00, ?B/s]Generating "Netac iDrive.ipa"
+
+'app'
+
+E:\p1471\frida-ios-dump-master>
